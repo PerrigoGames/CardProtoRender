@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CardProtoRenderer" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,14 +687,14 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="200"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="hvg-Sm-9gL"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -701,17 +702,121 @@
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <scene sceneID="zfx-Kk-JVf">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController id="Mwe-oe-rH4" sceneMemberID="viewController">
+                    <view key="view" id="SKE-GP-man">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
+                <customObject id="6x3-UP-8Nr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="681"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CardProtoRenderer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="111"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cJ4-rY-RUi">
+                                <rect key="frame" x="14" y="76" width="88" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Data File Path" id="cgW-bW-JyK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfy-RO-YK4">
+                                <rect key="frame" x="108" y="73" width="275" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Kxe-ZA-JmJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-gj-EwO" userLabel="Data Browse Button">
+                                <rect key="frame" x="385" y="67" width="85" height="32"/>
+                                <buttonCell key="cell" type="push" title="Browse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="41N-R9-FiR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dataBrowsePressed:" target="XfG-lQ-9wD" id="u18-qT-Kxs"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8Q-hY-edz">
+                                <rect key="frame" x="14" y="46" width="106" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output Directory" id="bcf-XZ-zrd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-NM-Xj7">
+                                <rect key="frame" x="126" y="43" width="257" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ODz-zl-LyJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiA-KP-3VM" userLabel="Output Browse Button">
+                                <rect key="frame" x="385" y="37" width="85" height="32"/>
+                                <buttonCell key="cell" type="push" title="Browse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B1t-Ur-7vE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="outputBrowsePressed:" target="XfG-lQ-9wD" id="IVg-yh-WRA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-Do-wvf" userLabel="Run Button">
+                                <rect key="frame" x="10" y="10" width="64" height="32"/>
+                                <buttonCell key="cell" type="push" title="Run" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9dC-HN-vVU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="runPressed:" target="XfG-lQ-9wD" id="Tz5-qd-5Vh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KiA-KP-3VM" firstAttribute="centerY" secondItem="ryo-NM-Xj7" secondAttribute="centerY" id="1ef-Cv-ZP0"/>
+                            <constraint firstItem="ryo-NM-Xj7" firstAttribute="centerY" secondItem="K8Q-hY-edz" secondAttribute="centerY" id="6Ca-gf-lRK"/>
+                            <constraint firstItem="K8Q-hY-edz" firstAttribute="leading" secondItem="cJ4-rY-RUi" secondAttribute="leading" id="8Mp-ze-7Bv"/>
+                            <constraint firstItem="ryo-NM-Xj7" firstAttribute="leading" secondItem="K8Q-hY-edz" secondAttribute="trailing" constant="8" id="9ru-QE-rNf"/>
+                            <constraint firstItem="pKD-Do-wvf" firstAttribute="top" secondItem="K8Q-hY-edz" secondAttribute="bottom" constant="8" id="B9n-Xs-ufC"/>
+                            <constraint firstItem="Mfy-RO-YK4" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="DTs-Hg-VbY"/>
+                            <constraint firstItem="Mfy-RO-YK4" firstAttribute="centerY" secondItem="cJ4-rY-RUi" secondAttribute="centerY" id="Gc1-Dp-uMh"/>
+                            <constraint firstItem="KiA-KP-3VM" firstAttribute="trailing" secondItem="vBJ-gj-EwO" secondAttribute="trailing" id="ImK-zZ-XXn"/>
+                            <constraint firstItem="KiA-KP-3VM" firstAttribute="leading" secondItem="vBJ-gj-EwO" secondAttribute="leading" id="K2b-6o-1te"/>
+                            <constraint firstItem="vBJ-gj-EwO" firstAttribute="centerY" secondItem="Mfy-RO-YK4" secondAttribute="centerY" id="NQs-mF-VkD"/>
+                            <constraint firstAttribute="trailing" secondItem="vBJ-gj-EwO" secondAttribute="trailing" constant="16" id="RQO-Gx-UIs"/>
+                            <constraint firstItem="KiA-KP-3VM" firstAttribute="leading" secondItem="ryo-NM-Xj7" secondAttribute="trailing" constant="8" id="auN-5n-jK3"/>
+                            <constraint firstItem="pKD-Do-wvf" firstAttribute="leading" secondItem="K8Q-hY-edz" secondAttribute="leading" id="ct7-8J-aRU"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pKD-Do-wvf" secondAttribute="trailing" constant="16" id="ePp-bX-mrA"/>
+                            <constraint firstItem="vBJ-gj-EwO" firstAttribute="leading" secondItem="Mfy-RO-YK4" secondAttribute="trailing" constant="8" id="g5c-Mn-rts"/>
+                            <constraint firstItem="ryo-NM-Xj7" firstAttribute="top" secondItem="Mfy-RO-YK4" secondAttribute="bottom" constant="8" id="mzl-4E-l1s"/>
+                            <constraint firstItem="Mfy-RO-YK4" firstAttribute="leading" secondItem="cJ4-rY-RUi" secondAttribute="trailing" constant="8" id="oB6-YA-OGU"/>
+                            <constraint firstItem="cJ4-rY-RUi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="sbD-WK-PmL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataPathBrowse" destination="vBJ-gj-EwO" id="J2X-C7-ynB"/>
+                        <outlet property="dataPathField" destination="Mfy-RO-YK4" id="hHf-al-6fY"/>
+                        <outlet property="outputPathBrowse" destination="KiA-KP-3VM" id="gvM-5a-JtO"/>
+                        <outlet property="outputPathField" destination="ryo-NM-Xj7" id="lRA-a3-M2m"/>
+                        <outlet property="runButton" destination="pKD-Do-wvf" id="5zl-Ur-6PR"/>
+                    </connections>
+                </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-73" y="607.5"/>
         </scene>
     </scenes>
 </document>
