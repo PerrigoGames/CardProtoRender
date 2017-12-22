@@ -15,6 +15,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var dataPathBrowse: NSButton!
     @IBOutlet weak var outputPathBrowse: NSButton!
     @IBOutlet weak var runButton: NSButton!
+    @IBOutlet var outputView: NSTextView!
+    
     var openPanel: NSOpenPanel!
     
     override func viewDidLoad() {
@@ -49,7 +51,41 @@ class ViewController: NSViewController {
     }
     
     @IBAction func runPressed(_ sender: Any) {
-        
+        let cards = parseData(path: dataPathField.stringValue)
+        for card in cards {
+            var text = String(format: "%@ -- %@\n", card.name, card.flavorText)
+            for option in card.options {
+                text.append(String(format: "\t%@: %@\n", option.text, option.effect ?? ""))
+            }
+            outputView.textStorage?.append(NSAttributedString(string: text));
+//            print(String(format: "%@ -- %@", card.name, card.flavorText))
+        }
+    }
+    
+    func readFile(path: String) -> String? {
+        do {
+            let url = URL(fileURLWithPath: path)
+            let s = try String(contentsOf: url)
+            return s
+        } catch {
+            print("error processing: \(path): \(error)")
+        }
+        return nil
+    }
+    
+    func parseData(path: String) -> [Card] {
+        let decoder = JSONDecoder()
+        do {
+            guard let fileString = readFile(path: path) else {
+                return [Card]()
+            }
+            let fileData = fileString.data(using: .utf8)!
+            return try decoder.decode([Card].self, from: fileData)
+        } catch {
+            print("Error converting data to JSON")
+            print(error)
+        }
+        return [Card]()
     }
 }
 

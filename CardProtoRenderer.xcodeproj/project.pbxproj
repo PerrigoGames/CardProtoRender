@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04A98DED1FEA2E5200C1ED57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A98DEB1FEA2E5200C1ED57 /* Main.storyboard */; };
+		04A98DEF1FEA531600C1ED57 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A98DEE1FEA531600C1ED57 /* Card.swift */; };
 		04B01AAB1FEA0A0700F547E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */; };
 		04B01AAD1FEA0A0700F547E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B01AAC1FEA0A0700F547E0 /* ViewController.swift */; };
 		04B01AAF1FEA0A0700F547E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B01AAE1FEA0A0700F547E0 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		04A98DEC1FEA2E5200C1ED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04A98DEE1FEA531600C1ED57 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		04B01AA71FEA0A0700F547E0 /* CardProtoRenderer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardProtoRenderer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B01AAC1FEA0A0700F547E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */,
+				04A98DEE1FEA531600C1ED57 /* Card.swift */,
 				04B01AAC1FEA0A0700F547E0 /* ViewController.swift */,
 				04B01AAE1FEA0A0700F547E0 /* Assets.xcassets */,
 				04A98DEB1FEA2E5200C1ED57 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B01AAD1FEA0A0700F547E0 /* ViewController.swift in Sources */,
+				04A98DEF1FEA531600C1ED57 /* Card.swift in Sources */,
 				04B01AAB1FEA0A0700F547E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
