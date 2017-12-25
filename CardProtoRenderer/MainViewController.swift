@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
 
     @IBOutlet weak var dataPathField: NSTextField!
     @IBOutlet weak var outputPathField: NSTextField!
@@ -16,6 +16,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var outputPathBrowse: NSButton!
     @IBOutlet weak var runButton: NSButton!
     @IBOutlet var outputView: NSTextView!
+    @IBOutlet weak var cardPreview: NSView!
     
     var openPanel: NSOpenPanel!
     
@@ -51,6 +52,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func runPressed(_ sender: Any) {
+        outputView.textStorage?.setAttributedString(NSAttributedString(string: ""))
         let cards = parseData(path: dataPathField.stringValue)
         for card in cards {
             var text = String(format: "%@ -- %@\n", card.name, card.flavorText)
@@ -60,6 +62,10 @@ class ViewController: NSViewController {
             outputView.textStorage?.append(NSAttributedString(string: text));
 //            print(String(format: "%@ -- %@", card.name, card.flavorText))
         }
+        let card = cards[0]
+        let cardController = CardFrontViewController()
+        cardController.card = card
+        cardPreview.subviews = [cardController.view]
     }
     
     func readFile(path: String) -> String? {
