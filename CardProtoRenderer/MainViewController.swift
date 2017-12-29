@@ -16,8 +16,9 @@ class MainViewController: NSViewController {
     @IBOutlet weak var outputPathBrowse: NSButton!
     @IBOutlet weak var runButton: NSButton!
     @IBOutlet var outputView: NSTextView!
-    @IBOutlet weak var cardPreview: NSView!
+    @IBOutlet weak var cardPreview: NSImageView!
     
+    var cardFrontView = CardFrontView()
     var openPanel: NSOpenPanel!
     
     override func viewDidLoad() {
@@ -62,10 +63,21 @@ class MainViewController: NSViewController {
             outputView.textStorage?.append(NSAttributedString(string: text));
 //            print(String(format: "%@ -- %@", card.name, card.flavorText))
         }
-        let card = cards[0]
-        let cardController = CardFrontViewController()
-        cardController.card = card
-        cardPreview.subviews = [cardController.view]
+        setCard(card: cards[2])
+    }
+    
+    func setCard(card: Card) {
+        cardFrontView.card = card
+        cardPreview.image = getCardImage(card: cardFrontView.view)
+        
+    }
+    
+    func getCardImage(card: NSView) -> NSImage {
+        let rep = card.bitmapImageRepForCachingDisplay(in: card.bounds)!
+        card.cacheDisplay(in: card.bounds, to: rep)
+        let image: NSImage = NSImage()
+        image.addRepresentation(rep)
+        return image
     }
     
     func readFile(path: String) -> String? {

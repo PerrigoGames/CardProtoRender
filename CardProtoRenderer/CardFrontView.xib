@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner">
+            <connections>
+                <outlet property="cardTitle" destination="SVn-4b-bIJ" id="hBq-Q0-OSR"/>
+                <outlet property="flavorText" destination="lmv-r6-33P" id="hIA-JP-ihd"/>
+                <outlet property="questProgress" destination="Wow-UO-cAf" id="CUQ-GF-Rb7"/>
+                <outlet property="questTitle" destination="g6G-Y6-h1e" id="TB3-nF-hL9"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SVn-4b-bIJ" userLabel="Title Label">
+                    <rect key="frame" x="30" y="305" width="190" height="29"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="CARD TITLE" id="Gbs-E8-m73">
+                        <font key="font" metaFont="system" size="24"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="sdfg:" target="-1" id="5vs-WS-at3"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lmv-r6-33P">
+                    <rect key="frame" x="15" y="82" width="221" height="57"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Flavor Text Flavor Text Flavor Text Flavor Text Flavor Text Flavor Text Flavor Text" id="2mn-r8-die">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="3ob-ku-PMf" userLabel="Quest Detail">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="66"/>
+                    <subviews>
+                        <levelIndicator verticalHuggingPriority="750" ratingImage="NSCaution" translatesAutoresizingMaskIntoConstraints="NO" id="Wow-UO-cAf">
+                            <rect key="frame" x="45" y="34" width="160" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="6qE-Yk-1Dt"/>
+                                <constraint firstAttribute="width" secondItem="Wow-UO-cAf" secondAttribute="height" multiplier="5:1" id="aHB-AO-bJV"/>
+                            </constraints>
+                            <levelIndicatorCell key="cell" alignment="left" maxValue="5" levelIndicatorStyle="rating" image="NSCaution" id="bUq-3U-Uy6"/>
+                        </levelIndicator>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-Y6-h1e">
+                            <rect key="frame" x="14" y="8" width="222" height="18"/>
+                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Quest Title" id="MXp-kS-9Zj">
+                                <font key="font" metaFont="system" size="14"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="g6G-Y6-h1e" secondAttribute="bottom" constant="8" id="5fX-JD-FWy"/>
+                        <constraint firstItem="g6G-Y6-h1e" firstAttribute="top" secondItem="Wow-UO-cAf" secondAttribute="bottom" constant="8" id="CaP-ej-jWN"/>
+                        <constraint firstItem="Wow-UO-cAf" firstAttribute="centerX" secondItem="3ob-ku-PMf" secondAttribute="centerX" id="Cvd-x1-Y4v"/>
+                        <constraint firstItem="g6G-Y6-h1e" firstAttribute="leading" secondItem="3ob-ku-PMf" secondAttribute="leading" constant="16" id="GC8-ID-gfs"/>
+                        <constraint firstItem="Wow-UO-cAf" firstAttribute="top" secondItem="3ob-ku-PMf" secondAttribute="top" id="GHK-z8-j7F"/>
+                        <constraint firstItem="Wow-UO-cAf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3ob-ku-PMf" secondAttribute="leading" id="Zbm-OM-Kcg"/>
+                        <constraint firstAttribute="trailing" secondItem="g6G-Y6-h1e" secondAttribute="trailing" constant="16" id="aiM-s2-VCA"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wow-UO-cAf" secondAttribute="trailing" id="vOi-MV-O9h"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="SVn-4b-bIJ" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="3Az-Iw-oJK"/>
+                <constraint firstItem="SVn-4b-bIJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="32" id="6Sa-Y5-k3u"/>
+                <constraint firstItem="3ob-ku-PMf" firstAttribute="top" secondItem="lmv-r6-33P" secondAttribute="bottom" constant="16" id="6oN-1f-2pc"/>
+                <constraint firstItem="SVn-4b-bIJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="7LI-iI-iBT"/>
+                <constraint firstItem="3ob-ku-PMf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="7ay-lp-5fc"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lmv-r6-33P" secondAttribute="trailing" constant="16" id="ALt-XV-f9k"/>
+                <constraint firstAttribute="trailing" secondItem="SVn-4b-bIJ" secondAttribute="trailing" constant="32" id="Crw-Ev-dhd"/>
+                <constraint firstItem="lmv-r6-33P" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="GZW-Gc-hgg"/>
+                <constraint firstAttribute="bottom" secondItem="3ob-ku-PMf" secondAttribute="bottom" id="a8M-7T-hE3"/>
+                <constraint firstItem="lmv-r6-33P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="cD7-SJ-tlH"/>
+                <constraint firstItem="3ob-ku-PMf" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="fRH-I2-Dmg"/>
+                <constraint firstAttribute="trailing" secondItem="3ob-ku-PMf" secondAttribute="trailing" id="p3m-Rx-t1w"/>
+            </constraints>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSCaution" width="32" height="32"/>
+    </resources>
+</document>

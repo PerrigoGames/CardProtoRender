@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043E5C6E1FF46B77000C7E26 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5C6C1FF46B77000C7E26 /* CardFrontView.swift */; };
+		043E5C731FF48160000C7E26 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 043E5C721FF48160000C7E26 /* Podfile */; };
 		04A98DED1FEA2E5200C1ED57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A98DEB1FEA2E5200C1ED57 /* Main.storyboard */; };
 		04A98DEF1FEA531600C1ED57 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A98DEE1FEA531600C1ED57 /* Card.swift */; };
-		04A98DF21FEE11D300C1ED57 /* CardFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A98DF11FEE11D300C1ED57 /* CardFrontViewController.swift */; };
 		04B01AAB1FEA0A0700F547E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */; };
 		04B01AAD1FEA0A0700F547E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B01AAC1FEA0A0700F547E0 /* MainViewController.swift */; };
 		04B01AAF1FEA0A0700F547E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B01AAE1FEA0A0700F547E0 /* Assets.xcassets */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043E5C6C1FF46B77000C7E26 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
+		043E5C721FF48160000C7E26 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		04A98DEC1FEA2E5200C1ED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04A98DEE1FEA531600C1ED57 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		04A98DF11FEE11D300C1ED57 /* CardFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontViewController.swift; sourceTree = "<group>"; };
 		04B01AA71FEA0A0700F547E0 /* CardProtoRenderer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardProtoRenderer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B01AAC1FEA0A0700F547E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				04B01ABC1FEA0A0700F547E0 /* CardProtoRendererTests */,
 				04B01AC71FEA0A0700F547E0 /* CardProtoRendererUITests */,
 				04B01AA81FEA0A0700F547E0 /* Products */,
+				043E5C721FF48160000C7E26 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +105,7 @@
 			children = (
 				04B01AAA1FEA0A0700F547E0 /* AppDelegate.swift */,
 				04A98DEE1FEA531600C1ED57 /* Card.swift */,
-				04A98DF11FEE11D300C1ED57 /* CardFrontViewController.swift */,
+				043E5C6C1FF46B77000C7E26 /* CardFrontView.swift */,
 				04B01AAC1FEA0A0700F547E0 /* MainViewController.swift */,
 				04B01AAE1FEA0A0700F547E0 /* Assets.xcassets */,
 				04A98DEB1FEA2E5200C1ED57 /* Main.storyboard */,
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A98DED1FEA2E5200C1ED57 /* Main.storyboard in Resources */,
+				043E5C731FF48160000C7E26 /* Podfile in Resources */,
 				04B01AAF1FEA0A0700F547E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A98DF21FEE11D300C1ED57 /* CardFrontViewController.swift in Sources */,
 				04B01AAD1FEA0A0700F547E0 /* MainViewController.swift in Sources */,
+				043E5C6E1FF46B77000C7E26 /* CardFrontView.swift in Sources */,
 				04A98DEF1FEA531600C1ED57 /* Card.swift in Sources */,
 				04B01AAB1FEA0A0700F547E0 /* AppDelegate.swift in Sources */,
 			);
